@@ -45,7 +45,11 @@ header .block_2 nav a {
     text-decoration: none;
     color: #FFFFFF;
 }
-
+@media(max-width:500px) {
+    header .block_2 {
+        width:300px;
+    }
+}
 /*1 экран */
 
 .main_alcohol {
@@ -489,6 +493,7 @@ footer {
     gap: calc(7.51vw - 8.16px);
 }
 form {
+    padding:20px;
     display: flex;
     flex-direction: column;
     gap: 30px;
