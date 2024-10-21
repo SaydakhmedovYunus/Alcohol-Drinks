@@ -1,0 +1,933 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+/*     outline: 2px solid red; */
+}
+header {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Добавление тени */
+    transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+}
+
+header:hover {
+    background-color: #333; /* Изменение фона при наведении */
+}
+
+header .block_1 {
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+}
+
+header .block_2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Добавление отступов для блока 2 */
+}
+
+header .block_2 nav {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+header .block_2 nav a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-align: right;
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: color 0.3s ease; /* Плавный переход цвета текста */
+}
+
+header .block_2 nav a:hover {
+    color: #FFD700; /* Изменение цвета текста при наведении */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Добавление тени к тексту */
+}
+
+/*1 экран */
+
+.main_alcohol {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.left_side img {
+    width: 100%;
+    height: 100%;
+}
+.right_side {
+    padding: 50px;
+    background-color: #996B60;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0; /* Исходная непрозрачность для эффекта появления */
+    transform: translateY(20px); /* Смещение для эффекта появления */
+    animation: fadeInUp 0.6s forwards; /* Анимация появления */
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Полная непрозрачность */
+        transform: translateY(0); /* Возврат в исходное положение */
+    }
+}
+
+.right_side h1 {
+    font-family: 'Liberation Serif', serif; /* Исправление имени шрифта */
+    font-size: calc(4.97vw + 1.33px);
+    font-weight: 400;
+    text-align: left;
+    color: #FFFFFF;
+    opacity: 0; /* Исходная непрозрачность */
+    transform: translateY(-10px); /* Начальное смещение для эффекта появления */
+    animation: slideInLeft 0.6s forwards 0.3s; /* Анимация появления с задержкой */
+}
+
+/* Анимация для заголовка */
+@keyframes slideInLeft {
+    to {
+        opacity: 1; /* Полная непрозрачность */
+        transform: translateY(0); /* Возврат в исходное положение */
+    }
+}
+
+.right_side p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: left;
+    color: #FFFFFF;
+    opacity: 0; /* Исходная непрозрачность */
+    transform: translateY(-10px); /* Начальное смещение */
+    animation: slideInLeft 0.6s forwards 0.4s; /* Анимация появления с задержкой */
+}
+
+.right_side button {
+    border: 1px solid white;
+    background-color: transparent;
+    width: 180px;
+    height: 52px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    opacity: 0; /* Исходная непрозрачность */
+    transform: translateY(10px); /* Смещение для эффекта появления */
+    animation: fadeInUp 0.6s forwards 0.5s; /* Анимация появления с задержкой */
+    cursor: pointer;
+}
+
+.right_side button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Фон кнопки при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+@media (max-width:1620px) {
+    .left_side{
+width: 50%;
+    }
+    .right_side {
+width: 50%;
+    }
+}
+@media (max-width:500px) {
+    .main_alcohol {
+        flex-wrap: wrap;
+    }
+    .left_side{
+        width: 100%;
+            }
+            .right_side {
+        width: 100%;
+            }
+}
+
+.new_york {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 80px;
+}
+.new_york div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 0; /* Исходная непрозрачность для эффекта появления */
+    transform: translateY(20px); /* Смещение для эффекта появления */
+    animation: fadeInUp 0.6s forwards; /* Анимация появления */
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Полная непрозрачность */
+        transform: translateY(0); /* Возврат в исходное положение */
+    }
+}
+
+.new_york div span {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    opacity: 0; /* Исходная непрозрачность */
+    transform: translateY(-10px); /* Начальное смещение для эффекта появления */
+    animation: slideIn 0.6s forwards 0.3s; /* Анимация появления с задержкой */
+}
+
+/* Анимация для текста */
+@keyframes slideIn {
+    to {
+        opacity: 1; /* Полная непрозрачность */
+        transform: translateY(0); /* Возврат в исходное положение */
+    }
+}
+
+.new_york div img {
+    width: 300px;
+    height: 50px;
+    opacity: 0; /* Исходная непрозрачность */
+    transform: scale(0.9); /* Уменьшение размера для эффекта появления */
+    animation: scaleIn 0.6s forwards 0.6s; /* Анимация появления с задержкой */
+}
+
+/* Анимация для изображения */
+@keyframes scaleIn {
+    to {
+        opacity: 1; /* Полная непрозрачность */
+        transform: scale(1); /* Возврат к исходному размеру */
+    }
+}
+
+@media (max-width:900px) {
+    .new_york {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 80px;
+    }
+}
+@media (max-width:500px) {
+    .new_york {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 80px;
+    }
+}
+.cards {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.cards h1 {
+    font-family: 'Liberation Serif';
+    font-size: calc(1.40vw + 34.7px);
+    line-height: 80px;
+    text-align: center;
+}
+
+.cards span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.cards_alc {
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.cards_alc div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Исходная непрозрачность для эффекта появления */
+    transform: translateY(20px); /* Смещение для эффекта появления */
+    animation: fadeInUp 0.6s forwards; /* Анимация появления */
+}
+
+/* Анимация появления для карточек */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Полная непрозрачность */
+        transform: translateY(0); /* Возврат в исходное положение */
+    }
+}
+
+/* Анимация появления с задержкой для каждой карточки */
+.cards_alc div:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.cards_alc div:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.cards_alc div:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.cards_alc div:nth-child(4) {
+    animation-delay: 0.8s;
+}
+.cards_alc div:nth-child(5) {
+    animation-delay: 1s;
+}
+.cards_alc div:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.cards_alc div img {
+    width: calc(5.82vw + 278.1px);
+    transition: transform 0.3s; /* Плавный переход при изменении размера */
+}
+
+.cards_alc div img:hover {
+    transform: scale(1.05); /* Увеличение изображения при наведении */
+}
+
+.cards_alc div h1 {
+    font-family: 'Liberation Serif';
+    font-size: 30px;
+    line-height: 44px;
+    text-align: center;
+}
+
+.cards_alc div p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.cards_alc button {
+    background-color: black;
+    width: 180px;
+    height: 52px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #FFFFFF;
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+    cursor: pointer;
+}
+
+.cards_alc button:hover {
+    background-color: #444; /* Изменение цвета фона кнопки при наведении */
+}
+
+@media (max-width: 900px) {
+    .cards_alc {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .cards_alc {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.djin {
+    padding: 30px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0; /* Исходная непрозрачность для эффекта появления */
+    transform: translateY(20px); /* Смещение для эффекта появления */
+    animation: fadeInUp 0.6s forwards; /* Анимация появления */
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Полная непрозрачность */
+        transform: translateY(0); /* Возврат в исходное положение */
+    }
+}
+
+.djin img {
+    width: 100%;
+    transition: transform 0.3s; /* Плавный переход при изменении размера */
+}
+
+.djin img:hover {
+    transform: scale(1.05); /* Увеличение изображения при наведении */
+}
+
+.djin .little_djin {
+    margin-top: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.djin .little_djin h1 {
+    font-family: 'Liberation Serif', serif;
+    font-size: calc(2.15vw + 21.9px);
+    text-align: left;
+    opacity: 0; /* Исходная непрозрачность для эффекта появления */
+    transform: translateY(-10px); /* Смещение вверх для эффекта появления */
+    animation: slideIn 0.6s forwards 0.3s; /* Анимация появления с задержкой */
+}
+
+/* Анимация появления для заголовка */
+@keyframes slideIn {
+    to {
+        opacity: 1; /* Полная непрозрачность */
+        transform: translateY(0); /* Возврат в исходное положение */
+    }
+}
+
+.djin .little_djin p {
+    width: calc(21.8vw + 232.9px);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: left;
+    opacity: 0; /* Исходная непрозрачность для эффекта появления */
+    transform: translateY(-10px); /* Смещение вверх для эффекта появления */
+    animation: slideIn 0.6s forwards 0.4s; /* Анимация появления с задержкой */
+}
+
+@media (max-width:1920px) {
+    .cards {
+        padding: 30px;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .new_york {
+        padding: 30px;
+    }
+}
+@media (max-width:500px) {
+    .cards {
+        padding: 0px;
+    }
+}
+
+.info_drinks {
+    margin-top: 30px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    opacity: 0; /* Исходная непрозрачность для эффекта появления */
+    transform: translateY(20px); /* Смещение для эффекта появления */
+    animation: fadeInUp 0.6s forwards; /* Анимация появления */
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.info_drinks img {
+    width: 100%;
+    border: 2px solid transparent; /* Прозрачная рамка по умолчанию */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out; /* Плавные переходы */
+}
+
+.info_drinks img:hover {
+    transform: scale(1.05); /* Увеличение изображения при наведении */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+    border: 2px solid #996B60; /* Цвет рамки при наведении */
+}
+
+.easy_to_drink {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid transparent; /* Прозрачная рамка по умолчанию */
+    transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Плавные переходы */
+    opacity: 0; /* Исходная непрозрачность для эффекта появления */
+    transform: translateY(20px); /* Смещение для эффекта появления */
+    animation: fadeInUp 0.6s forwards 0.4s; /* Анимация появления с задержкой */
+}
+
+.easy_to_drink:hover {
+    border: 2px solid #996B60; /* Цвет рамки при наведении */
+    background-color: rgba(153, 107, 96, 0.1); /* Добавление фона при наведении */
+}
+.easy_to_drink{
+    border: 2px solid #996B60; /* Цвет рамки при наведении */
+    background-color: rgba(153, 107, 96, 0.1); /* Добавление фона при наведении */
+}
+
+.easy_to_drink div h1 {
+    font-family: 'Liberation Serif', serif;
+    font-size: calc(0.65vw + 20.5px);
+    line-height: 44px;
+    text-align: left;
+}
+
+.easy_to_drink div p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: left;
+}
+
+@media (max-width: 500px) {
+    .info_drinks {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.buyers {
+    height: 313px;
+    padding: 30px;
+    background-color: black;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    opacity: 0; /* Для анимации появления */
+    transform: translateY(20px); /* Начальное смещение для появления */
+    animation: fadeInUp 0.6s forwards; /* Анимация плавного появления */
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.buyers div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #FFFFFF;
+    padding: 20px;
+    border: 2px solid transparent; /* Прозрачная рамка по умолчанию */
+    transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Плавные переходы для эффектов */
+}
+
+.buyers div:hover {
+    border: 2px solid #996B60; /* Рамка при наведении */
+    background-color: rgba(153, 107, 96, 0.1); /* Фон при наведении */
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+
+.buyers div p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    transition: color 0.3s ease-in-out; /* Переход цвета текста */
+}
+
+.buyers div h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    transition: color 0.3s ease-in-out; /* Переход цвета текста */
+}
+
+.buyers div span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #8A8A8A;
+    transition: color 0.3s ease-in-out; /* Переход цвета текста */
+}
+
+.buyers div:hover p,
+.buyers div:hover h3,
+.buyers div:hover span {
+    color: #FFFFFF; /* Изменение цвета текста при наведении */
+}
+
+@media (max-width: 500px) {
+    .buyers {
+        height: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.flowers {
+    margin-top: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: calc(7.51vw - 8.16px);
+    flex-wrap: wrap;
+    opacity: 0; /* Для анимации появления */
+    transform: translateY(20px); /* Начальное смещение для появления */
+    animation: fadeInUp 0.6s forwards; /* Анимация плавного появления */
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.flowers img {
+    width: calc(18vw + 258px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Плавные переходы для эффектов */
+}
+
+.flowers img:hover {
+    transform: scale(1.05); /* Легкое увеличение изображения при наведении */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+}
+
+.flowers div {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    border: 2px solid transparent; /* Прозрачная рамка по умолчанию */
+    transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Плавные переходы для эффектов */
+}
+
+.flowers div {
+    border: 2px solid #996B60; /* Цвет рамки при наведении */
+    background-color: rgba(153, 107, 96, 0.1);
+}
+.flowers div:hover {
+    border: 2px solid #996B60; /* Цвет рамки при наведении */
+    background-color: rgba(153, 107, 96, 0.1); /* Фон при наведении */
+    transform: scale(1.03); /* Легкое увеличение контейнера при наведении */
+}
+
+.flowers div h1 {
+    font-family: 'Liberation Serif', serif;
+    font-size: 1.5em;
+    text-align: left;
+    transition: color 0.3s ease-in-out; /* Плавное изменение цвета текста */
+}
+
+.flowers div p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: left;
+    transition: color 0.3s ease-in-out; /* Плавное изменение цвета текста */
+}
+
+.flowers div:hover h1,
+.flowers div:hover p {
+    color: #996B60; /* Изменение цвета текста при наведении */
+}
+
+@media (max-width: 1920px) {
+    .flowers {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (max-width: 500px) {
+    .flowers {
+        flex-wrap: wrap;
+    }
+}
+
+.registration {
+    padding: 60px;
+    background-image: url(./img/Rectangle\ \(10\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 50px;
+    opacity: 0; /* Для анимации появления */
+    transform: translateY(20px); /* Начальное смещение для появления */
+    animation: fadeInUp 0.6s forwards; /* Анимация плавного появления */
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.registration .first, 
+.registration .second {
+    padding-bottom: 20px;
+    background-color: black;
+    color: white;
+    width: calc(25.8vw + 178.1px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Плавные переходы для эффектов */
+}
+
+.registration .first:hover,
+.registration .second:hover {
+    transform: scale(1.05); /* Легкое увеличение контейнера при наведении */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Тень при наведении */
+}
+
+.registration h1 {
+    font-family: 'Liberation Serif', serif;
+    font-size: calc(3.28vw + 7.67px);
+    line-height: 80px;
+    text-align: center;
+    transition: color 0.3s ease-in-out; /* Плавное изменение цвета текста */
+}
+
+.registration p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    transition: color 0.3s ease-in-out; /* Плавное изменение цвета текста */
+}
+
+.registration button {
+    width: 180px;
+    height: 52px;
+    background-color: #996B60;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Плавные переходы для эффектов */
+}
+
+.registration button:hover {
+    background-color: #BA8977; /* Изменение фона кнопки при наведении */
+    transform: scale(1.1); /* Легкое увеличение кнопки при наведении */
+}
+
+.registration .second h1 {
+    font-family: 'Liberation Serif', serif;
+    font-size: 20px;
+    line-height: 80px;
+    text-align: center;
+    transition: color 0.3s ease-in-out; /* Плавное изменение цвета текста */
+}
+
+.registration .second div {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.registration .second div a { 
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: color 0.3s ease-in-out; /* Плавное изменение цвета текста */
+}
+
+.registration .second div a:hover {
+    color: #996B60; /* Изменение цвета ссылки при наведении */
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 500px) {
+    .registration .first,
+    .registration .second {
+        width: 100%;
+    }
+}
+
+footer {
+    background-color: black;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    color: white;
+    opacity: 0; /* Для анимации появления */
+    transform: translateY(20px); /* Начальное смещение для появления */
+    animation: fadeInUp 0.6s forwards; /* Анимация плавного появления */
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.last {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: calc(7.51vw - 8.16px);
+}
+
+form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: rgba(255, 255, 255, 0.1); /* Прозрачный фон для формы */
+    border-radius: 8px; /* Округление углов */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Тень для формы */
+    transition: box-shadow 0.3s ease-in-out; /* Плавный эффект */
+}
+
+form:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Увеличение тени при наведении */
+}
+
+form h1 {
+    font-family: 'Liberation Serif', serif;
+    font-size: 42px;
+    line-height: 72px;
+    text-align: left;
+    color: #FFFFFF;
+    transition: color 0.3s ease-in-out; /* Плавное изменение цвета текста */
+}
+
+form p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: left;
+}
+
+form input {
+    width: 100%;
+    background-color: black;
+    border: none;
+    height: 53px;
+    border-bottom: 1px solid gray;
+    outline: none;
+    color: white;
+    transition: border-color 0.3s ease-in-out; /* Плавный эффект изменения цвета */
+}
+
+form input:focus {
+    border-bottom: 1px solid white; /* Изменение цвета границы при фокусе */
+}
+
+.last div {
+    padding: 5px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.last div .b {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.last div .b a {
+    text-decoration: none;
+    color: #FFFFFF99;
+    transition: color 0.3s ease-in-out; /* Плавный переход цвета */
+}
+
+.last div .b a:hover {
+    color: #FFFFFF; /* Яркий белый цвет при наведении */
+}
+
+.last_d {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: calc(7.51vw - 8.16px);
+}
+
+.last_d a {
+    text-decoration: none;
+    color: #FFFFFF99;
+    transition: color 0.3s ease-in-out; /* Плавный переход цвета */
+}
+
+.last_d a:hover {
+    color: #FFFFFF; /* Яркий белый цвет при наведении */
+}
+
+/* Адаптивные стили для маленьких экранов */
+@media (max-width: 500px) {
+    .last_d {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+}
